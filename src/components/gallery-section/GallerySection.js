@@ -1,256 +1,75 @@
-import React, { useState,useEffect } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
 import './gallerySection.scss';
 
+const videoData = [
+    { id: 'CJ6yXd5QZvg', category: 'fashion', description: 'Rick Astley - Never Gonna Give You Up (Official Music Video)' },
+    { id: 'XbGSGLwDNIk', category: 'event', description: 'Epic Rap Battles of History: Steve Jobs vs Bill Gates' },
+    { id: 'imRLJPyudJk', category: 'model', description: 'Behind the Scenes of a Fashion Photoshoot' },
+    { id: 'ZbZSe6N_BXs', category: 'other', description: 'Travel Vlog: Exploring the Wonders of the World' },
+    { id: 'ALwJJAYStBw', category: 'fashion', description: 'The Best Summer Fashion Trends 2024' },
+    { id: 'YHd-PtOtrcw', category: 'event', description: 'Annual Music Festival Highlights' },
+    { id: 'g6v3UCymCiM', category: 'model', description: 'Modeling Tips and Tricks from Experts' },
+    { id: 'ydmgkbYgb20', category: 'other', description: 'DIY Home Improvement Projects' },
+    { id: 'Vxft-IRBF1o', category: 'fashion', description: 'Fashion Week Best Looks Compilation' },
+    { id: 'mMybyxKqhdg', category: 'event', description: 'Recap of Major Sports Events of the Year' },
+    { id: 'Xl08OlVMpI0', category: 'model', description: 'Top Catwalk Moments from Fashion Shows' },
+    { id: 'xVDRYlsHIV8', category: 'other', description: 'Cooking Recipe: How to Make Delicious Pasta' },
+];
+
+
 const GallerySection = () => {
-    const [modalContent, setModalContent] = useState(null);
+    const [activeFilter, setActiveFilter] = useState('all');
 
-    const handleMediaClick = (src, width, height) => {
-        setModalContent({ src, width, height });
-    };
-
-    const closeModal = () => {
-        setModalContent(null);
-    };
+   
 
     useEffect(() => {
         const handleClick = (event) => {
-          const target = event.currentTarget;
-          document.querySelectorAll('.gallery-controls li').forEach((li) => {
-            li.classList.remove('active');
-          });
-          target.classList.add('active');
+            const target = event.currentTarget;
+            document.querySelectorAll('.gallery-controls li').forEach((li) => {
+                li.classList.remove('active');
+            });
+            target.classList.add('active');
+            setActiveFilter(target.getAttribute('data-filter'));
         };
-    
+
         document.querySelectorAll('.gallery-controls li').forEach((li) => {
-          li.addEventListener('click', handleClick);
+            li.addEventListener('click', handleClick);
         });
-    
-        const containerEl = document.querySelector('.gallery-filter');
-        if (containerEl) {
-          const mixitup = require('mixitup');
-          const mixer = mixitup(containerEl);
-        }
-    
+
         return () => {
-          document.querySelectorAll('.gallery-controls li').forEach((li) => {
-            li.removeEventListener('click', handleClick);
-          });
+            document.querySelectorAll('.gallery-controls li').forEach((li) => {
+                li.removeEventListener('click', handleClick);
+            });
         };
-      }, []);
+    }, []);
 
     return (
         <section className="gallery-section spad">
-            <Container>
-                <Row>
-                    <Col lg={12}>
-                        <div className="gallery-controls">
-                            <ul>
-                                <li className="active" data-filter=".all">All gallery</li>
-                                <li data-filter=".fashion">Fashion</li>
-                                <li data-filter=".model">Model</li>
-                                <li data-filter=".event">Event</li>
-                                <li data-filter=".other">Other</li>
-                            </ul>
-                        </div>
-                    </Col>
-                </Row>
-                <Row className="gallery-filter">
-                    
-                    <Col lg={6}>
-                        <Row>
-                            <Col lg={6} className="mix all model">
-                                <div className="gs-item">
-                                    <video
-                                        width="100%"
-                                        height="auto"
-                                        src="https://mdk.pw/img/port/photo_2024-02-12_21-32-55.mp4"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        onClick={() => handleMediaClick('https://mdk.pw/img/port/photo_2024-02-12_21-32-55.mp4', 600, 600)}
-                                    >
-                                        <source src="https://mdk.pw/img/port/photo_2024-02-12_21-32-55.mp4" type="video/mp4" />
-                                    </video>
-                                </div>
-                            </Col>
-                            <Col lg={6} className="mix all event">
-                                <div className="gs-item">
-                                    <video
-                                        width="100%"
-                                        height="auto"
-                                        src="https://mdk.pw/img/port/photo_2023-06-26_10-05-39.mp4"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        onClick={() => handleMediaClick('https://mdk.pw/img/port/photo_2023-06-26_10-05-39.mp4', 600, 600)}
-                                    >
-                                        <source src="https://mdk.pw/img/port/photo_2023-06-26_10-05-39.mp4" type="video/mp4" />
-                                    </video>
-                                </div>
-                            </Col>
-                            <Col lg={6} className="mix all other">
-                                <div className="gs-item">
-                                    <video
-                                        width="100%"
-                                        height="auto"
-                                        src="https://mdk.pw/img/port/jerry.mp4"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        onClick={() => handleMediaClick('https://mdk.pw/img/port/jerry.mp4', 600, 600)}
-                                    >
-                                        <source src="https://mdk.pw/img/port/jerry.mp4" type="video/mp4" />
-                                    </video>
-                                </div>
-                            </Col>
-                            <Col lg={6} className="mix all fashion">
-                                <div className="gs-item">
-                                    <video
-                                        width="100%"
-                                        height="auto"
-                                        src="https://mdk.pw/img/port/Comp 1_1.mp4"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        onClick={() => handleMediaClick('https://mdk.pw/img/port/Comp 1_1.mp4', 600, 600)}
-                                    >
-                                        <source src="https://mdk.pw/img/port/Comp 1_1.mp4" type="video/mp4" />
-                                    </video>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col lg={6}>
-                        <Row>
-                            <Col lg={6} className="mix all event">
-                                <div className="gs-item">
-                                    <video
-                                        width="100%"
-                                        height="auto"
-                                        src="https://mdk.pw/img/port/ae.mp4"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        onClick={() => handleMediaClick('https://mdk.pw/img/port/ae.mp4', 600, 600)}
-                                    >
-                                        <source src="https://mdk.pw/img/port/ae.mp4" type="video/mp4" />
-                                    </video>
-                                </div>
-                            </Col>
-                            <Col lg={6} className="mix all model other">
-                                <div className="gs-item">
-                                    <video
-                                        width="100%"
-                                        height="auto"
-                                        src="https://mdk.pw/img/port/Comp 12222_2.mp4"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        onClick={() => handleMediaClick('https://mdk.pw/img/port/Comp 12222_2.mp4', 600, 600)}
-                                    >
-                                        <source src="https://mdk.pw/img/port/Comp 12222_2.mp4" type="video/mp4" />
-                                    </video>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col lg={6} className="mix all fashion event">
-                        <div className="gs-item">
-                            <video
-                                width="100%"
-                                height="auto"
-                                src="https://mdk.pw/img/port/qwinsnew.mp4"
-                                autoPlay
-                                muted
-                                loop
-                                onClick={() => handleMediaClick('https://mdk.pw/img/port/qwinsnew.mp4', 600, 600)}
-                            >
-                                <source src="https://mdk.pw/img/port/qwinsnew.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </Col>
-                    <Col lg={6} className="mix all fashion event">
-                        <div className="gs-item">
-                            <video
-                                width="100%"
-                                height="auto"
-                                src="https://mdk.pw/img/port/alkatras.mp4"
-                                autoPlay
-                                muted
-                                loop
-                                onClick={() => handleMediaClick('https://mdk.pw/img/port/alkatras.mp4', 600, 600)}
-                            >
-                                <source src="https://mdk.pw/img/port/alkatras.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </Col>
-                    <Col lg={6} className="mix all fashion event">
-                        <div className="gs-item">
-                            <video
-                                width="100%"
-                                height="auto"
-                                src="https://mdk.pw/img/port/Comp 1 volumetric.mp4"
-                                autoPlay
-                                muted
-                                loop
-                                onClick={() => handleMediaClick('https://mdk.pw/img/port/Comp 1 volumetric.mp4', 600, 600)}
-                            >
-                                <source src="https://mdk.pw/img/port/Comp 1 volumetric.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </Col>
-                    <Col lg={6} className="mix all fashion event">
-                        <div className="gs-item">
-                            <video
-                                width="100%"
-                                height="auto"
-                                src="https://mdk.pw/img/port/Comp 1.mp4"
-                                autoPlay
-                                muted
-                                loop
-                                onClick={() => handleMediaClick('https://mdk.pw/img/port/Comp 1.mp4', 600, 600)}
-                            >
-                                <source src="https://mdk.pw/img/port/Comp 1.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </Col>
-                    <Col lg={6} className="mix all fashion">
-                        <div className="gs-item">
-                            <video
-                                width="100%"
-                                height="auto"
-                                src="https://mdk.pw/img/port/Comp 113.mp4"
-                                autoPlay
-                                muted
-                                loop
-                                onClick={() => handleMediaClick('https://mdk.pw/img/port/Comp 113.mp4', 600, 600)}
-                            >
-                                <source src="https://mdk.pw/img/port/Comp 113.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-
-            {modalContent && (
-                <div className="modal-container" onClick={closeModal}>
-                    <div className="modal-content" style={{ width: modalContent.width, height: modalContent.height}}>
-                        <video
+            <div className="gallery-controls">
+                <ul>
+                    <li className={activeFilter === 'all' ? 'active' : ''} data-filter="all">All gallery</li>
+                    <li className={activeFilter === 'fashion' ? 'active' : ''} data-filter="fashion">Fashion</li>
+                    <li className={activeFilter === 'model' ? 'active' : ''} data-filter="model">Model</li>
+                    <li className={activeFilter === 'event' ? 'active' : ''} data-filter="event">Event</li>
+                    <li className={activeFilter === 'other' ? 'active' : ''} data-filter="other">Other</li>
+                </ul>
+            </div>
+            <div className="gallery-filter">
+                {videoData.filter(video => activeFilter === 'all' || video.category === activeFilter).map((video) => (
+                    <div key={video.id} className={`gs-item mix ${video.category}`}>
+                        <iframe
                             width="100%"
                             height="auto"
-                            src={modalContent.src}
-                            controls
-                            autoPlay
-                        >
-                            <source src={modalContent.src} type="video/mp4" />
-                        </video>
-                        <a className="primary-btn"  onClick={closeModal}>X</a>
+                            src={`https://www.youtube.com/embed/${video.id}`}
+                            frameBorder="0"
+                            allow="autoplay; encrypted-media"
+                            allowFullScreen
+                        ></iframe>
                     </div>
-                </div>
-            )}
+                ))}
+            </div>
         </section>
     );
-}
+};
 
 export default GallerySection;
