@@ -1,0 +1,44 @@
+.breadcrumb-section {
+    background: #2a2a2a;
+    padding: 50px 0;
+  
+    &.bread-normal {
+      border-bottom: 1px solid #191919;
+    }
+  
+    .breadcrumb-option {
+      line-height: 36px;
+  
+      a {
+        display: inline-block;
+        color: #b3b3b3;
+        margin-right: 24px;
+        position: relative;
+  
+        &::after {
+          position: absolute;
+          right: -15px;
+          top: 16px;
+          width: 6px;
+          height: 6px;
+          background: #5c5c5c;
+          content: "";
+          border-radius: 50%;
+        }
+      }
+  
+      span {
+        color: #5c5c5c;
+      }
+    }
+  
+    .breadcrumb-text {
+      text-align: right;
+  
+      h3 {
+        color: #ffffff;
+        font-weight: 700;
+      }
+    }
+  }
+  

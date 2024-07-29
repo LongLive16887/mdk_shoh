@@ -1,10 +1,15 @@
+import AboutUsSecondSection from "../components/aboutus_second-section/AboutUsSecondSection";
+import BreadcrumbComponent from "../components/breadcrumb-section/BreadCrumbSection";
+import MembersSecondSection from "../components/members_second-section/MembersSecondSection";
 
 
 
 const AboutUsPage = () => {
     return(
         <>
-            <h1>AboutUsPage</h1>
+            <BreadcrumbComponent/>
+            <AboutUsSecondSection/>
+            <MembersSecondSection/>
         </>
     )
 }
