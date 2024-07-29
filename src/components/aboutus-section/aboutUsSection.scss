@@ -1,0 +1,76 @@
+/* ABOUT US SECTION */
+
+.about-us-section {
+    background: #191919;
+  
+    .as-pic {
+      img {
+        min-width: 100%;
+      }
+    }
+  
+    .as-text {
+      padding-top: 30px;
+      padding-left: 5px;
+  
+      &.ap-text {
+        padding-top: 14px;
+      }
+  
+      .section-title {
+        text-align: left;
+        margin-bottom: 15px;
+      }
+  
+      p {
+        color: #b3b3b3;
+  
+        &.f-para {
+          margin-bottom: 10px;
+        }
+  
+        &.s-para {
+          margin-bottom: 37px;
+        }
+      }
+  
+      .about-counter {
+        .ac-item {
+          float: left;
+          margin-right: 48px;
+          position: relative;
+  
+          &:after {
+            position: absolute;
+            right: -20px;
+            top: 8px;
+            height: 65px;
+            width: 1px;
+            background: #393939;
+            content: "";
+          }
+  
+          &:last-child {
+            margin-right: 0;
+            padding-right: 0;
+  
+            &:after {
+              display: none;
+            }
+          }
+  
+          h2 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 10px;
+          }
+  
+          p {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }

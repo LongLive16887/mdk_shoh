@@ -1,0 +1,93 @@
+// _header.scss
+.header-section {
+    background: #212529;
+    z-index: 2;
+    position: relative;
+
+    .logo {
+        padding: 24px 0 30px;
+        
+        
+        a {
+          display: inline-block;
+        }
+      }
+      
+    .main-menu {
+        text-align: right;
+        ul {
+            margin-bottom: 0;
+            padding-left: 0;
+          li {
+            display: inline-block;
+            list-style: none;
+            margin-left: 35px;
+            position: relative;
+            
+            .dropdown {
+              position: absolute;
+              width: 180px;
+              background: #ffffff;
+              z-index: 99;
+              left: 0;
+              top: 90px;
+              opacity: 0;
+              visibility: hidden;
+              transition: all 0.3s;
+              
+              li {
+                display: block;
+                margin-right: 0;
+                text-align: left;
+                margin-left: 0;
+      
+                a {
+                  padding: 8px 20px;
+                  display: block;
+                  transition: all 0.3s;
+                  text-transform: capitalize;
+                  color: #191919;
+      
+                  &:hover {
+                    color: #e32879;
+                  }
+                }
+              }
+            }
+            
+            &:hover {
+              > a {
+                color: #e32879;
+              }
+              
+              .dropdown {
+                opacity: 1;
+                visibility: visible;
+                top: 70px;
+              }
+            }
+      
+            &.active a {
+              color: #e32879;
+            }
+          }
+        }
+        
+        a {
+          font-size: 16px;
+          color: #ffffff;
+          font-weight: 700;
+          display: inline-block;
+          padding: 25px 0 30px;
+          transition: all 0.3s;
+          text-decoration: none;
+        }
+    }
+
+      
+    .slicknav_menu {
+        display: none;
+    }    
+}
+  
+  

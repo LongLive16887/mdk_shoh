@@ -1,0 +1,43 @@
+/* Counter section */
+  
+.counter-section {
+	background: #191919;
+	padding-top: 755px;
+	margin-top: -640px;
+	padding-bottom: 70px;
+  
+	.counter-text {
+	  	margin-bottom: 40px;
+  
+		.section-title {
+			text-align: left;
+			margin-bottom: 50px;
+		}
+	}
+  
+	.counter-item {
+		margin-bottom: 30px;
+		position: relative;
+	
+	  	.ci-number {
+			font-size: 48px;
+			color: #e32879;
+			font-weight: 700;
+			line-height: 50px;
+			position: absolute;
+			left: 0;
+			top: 0;
+	  }
+  
+	  .ci-text {
+			padding-left: 170px;
+  
+			h4 {
+				font-size: 22px;
+				color: #ffffff;
+				font-weight: 700;
+				margin-bottom: 12px;
+			}
+	  	}
+	}
+}

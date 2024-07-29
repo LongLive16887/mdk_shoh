@@ -1,0 +1,136 @@
+/* Footer */
+
+
+.footer-section {
+	background-color: #191919;
+	padding-top: 80px;
+	padding-bottom: 50px;
+  
+	.footer-option {
+	  margin-bottom: 30px;
+  
+	  .fo-logo {
+		margin-bottom: 30px;
+  
+		a {
+		  display: inline-block;
+		}
+	  }
+  
+	  ul {
+		margin-bottom: 12px;
+  
+		li {
+		  list-style: none;
+		  font-size: 16px;
+		  color: #b3b3b3;
+		  line-height: 30px;
+		}
+	  }
+  
+	  .fo-social {
+		a {
+		  display: inline-block;
+		  font-size: 16px;
+		  color: #ffffff;
+		  width: 41px;
+		  height: 41px;
+		  background: #303030;
+		  border-radius: 50%;
+		  text-align: center;
+		  line-height: 41px;
+		  transition: all 0.3s;
+		  margin-right: 3px;
+  
+		  &:hover {
+			background: #e32879;
+		  }
+		  img{
+			filter: brightness(0) invert(1);
+		  }
+		}
+	  }
+	}
+  
+	.footer-widget {
+	  margin-bottom: 30px;
+  
+	  &.fw-links {
+		padding-left: 35px;
+	  }
+  
+	  h5 {
+		font-size: 20px;
+		color: #ffffff;
+		font-weight: 700;
+		margin-bottom: 20px;
+	  }
+  
+	  ul {
+		li {
+		  list-style: none;
+  
+		  a {
+			font-size: 16px;
+			color: #b3b3b3;
+			line-height: 36px;
+		  }
+		}
+	  }
+  
+	  p {
+		margin-bottom: 18px;
+	  }
+  
+	  .news-form {
+		input {
+		  font-size: 14px;
+		  height: 46px;
+		  color: #b3b3b3;
+		  border: 1px solid #707070;
+		  padding-left: 25px;
+		  background: #191919;
+		  width: 100%;
+		  margin-bottom: 10px;
+  
+		  &::placeholder {
+			color: #b3b3b3;
+		  }
+		}
+  
+		button {
+		  font-size: 16px;
+		  color: #ffffff;
+		  font-weight: 700;
+		  display: block;
+		  background: #e32879;
+		  border: none;
+		  padding: 12px 0;
+		  width: 100%;
+		}
+	  }
+  
+	  .insta-pic {
+		img {
+		  margin-right: 5px;
+		  width: calc(33.33% - 5px);
+		  float: left;
+		  margin-bottom: 5px;
+		}
+	  }
+	}
+  
+	.copyright-text {
+	  p {
+		text-align: center;
+		color: #b3b3b3;
+		margin-top: 20px;
+		font-size: 14px;
+	  }
+
+	  img{
+		filter: invert(47%) sepia(89%) saturate(5095%) hue-rotate(312deg) brightness(103%) contrast(104%);
+	  }
+	}
+  }
+  
