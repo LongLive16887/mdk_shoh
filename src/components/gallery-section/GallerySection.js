@@ -56,21 +56,7 @@ const GallerySection = () => {
                     </Col>
                 </Row>
                 <Row className="gallery-filter">
-                    <Col lg={6} className="mix all fashion">
-                        <div className="gs-item">
-                            <video
-                                width="100%"
-                                height="auto"
-                                src="https://mdk.pw/img/port/Comp 113.mp4"
-                                autoPlay
-                                muted
-                                loop
-                                onClick={() => handleMediaClick('https://mdk.pw/img/port/Comp 113.mp4', 600, 600)}
-                            >
-                                <source src="https://mdk.pw/img/port/Comp 113.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                    </Col>
+                    
                     <Col lg={6}>
                         <Row>
                             <Col lg={6} className="mix all model">
@@ -226,6 +212,21 @@ const GallerySection = () => {
                                 onClick={() => handleMediaClick('https://mdk.pw/img/port/Comp 1.mp4', 600, 600)}
                             >
                                 <source src="https://mdk.pw/img/port/Comp 1.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </Col>
+                    <Col lg={6} className="mix all fashion">
+                        <div className="gs-item">
+                            <video
+                                width="100%"
+                                height="auto"
+                                src="https://mdk.pw/img/port/Comp 113.mp4"
+                                autoPlay
+                                muted
+                                loop
+                                onClick={() => handleMediaClick('https://mdk.pw/img/port/Comp 113.mp4', 600, 600)}
+                            >
+                                <source src="https://mdk.pw/img/port/Comp 113.mp4" type="video/mp4" />
                             </video>
                         </div>
                     </Col>
