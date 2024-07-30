@@ -1,13 +1,21 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const BlogSection = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
+  
+  
   return (
     <section className="blog-section latest-blog spad">
       <Container>
         <Row>
           <Col lg={12}>
-            <div className="section-title">
+            <div className="section-title" data-aos="zoom-in-left">
               <span>Latest Blog</span>
               <h2>From Our Blog</h2>
             </div>
@@ -15,7 +23,7 @@ const BlogSection = () => {
         </Row>
         <Row>
         <Col md={6}>
-              <div className="blog-item">
+              <div className="blog-item" data-aos="zoom-in-left">
                 <Row>
                   <Col lg = {6}>
                     <div 
@@ -62,7 +70,7 @@ const BlogSection = () => {
               </div>
             </Col>
             <Col md={6}>
-              <div className="blog-item">
+              <div className="blog-item" data-aos="zoom-in-left">
                 <Row>
                   <Col lg={6} >
                     <div 

@@ -1,12 +1,19 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "./aboutUsSecondSection.scss";
+import { Container, Row, Col } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
+
 
 const AboutUsSecondSection = () => {
     const [memberCount, setMemberCount] = useState(0);
     const [partnerCount, setPartnerCount] = useState(0);
     const [branchCount, setBranchCount] = useState(0);
     const [designsCount, setDesignsCount] = useState(0);
+
+    useEffect(() => {
+        AOS.init();
+      }, [])
 
     useEffect(() => {
         const animateCount = (target, setState, duration) => {
@@ -42,7 +49,7 @@ const AboutUsSecondSection = () => {
       
     return (
         <section className="about-us-section spad">
-            <Container>
+            <Container >
                 <Row>
                     <Col lg={6}>
                         <div className="as-pic">
@@ -50,7 +57,7 @@ const AboutUsSecondSection = () => {
                         </div>
                     </Col>
                     <Col lg={6}>
-                        <div className="as-text ap-text">
+                        <div className="as-text ap-text" data-aos="zoom-out">
                             <div className="section-title">
                                 <span>About us</span>
                                 <h2>About Story</h2>

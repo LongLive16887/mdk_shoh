@@ -1,12 +1,23 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 const BlogSecondSection = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
     return(
         <section className="blog-section latest-blog spad">
             <Container>
               <Row>
                 <Col lg={12}>
-                  <div className="section-title">
+                  <div className="section-title" 
+                  data-aos="fade-up"
+                  data-aos-duration="3000">
                     <span>Latest Blog</span>
                     <h2>From Our Blog</h2>
                   </div>
@@ -15,7 +26,9 @@ const BlogSecondSection = () => {
               <Row>
                 {blogPosts.map(post => (
                   <Col md={6} key={post.id}>
-                    <div className="blog-item">
+                    <div className="blog-item" 
+                    data-aos="fade-up"
+                    data-aos-duration="3000">
                       <Row>
                         <Col lg={6}>
                           <div className="bi-pic set-bg" style={{ backgroundImage: `url(${post.imgSrc})` }}></div>

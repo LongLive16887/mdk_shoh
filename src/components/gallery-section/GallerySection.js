@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './gallerySection.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const videoData = [
     { id: 'CJ6yXd5QZvg', category: 'fashion', description: 'Rick Astley - Never Gonna Give You Up (Official Music Video)' },
@@ -20,7 +22,9 @@ const videoData = [
 const GallerySection = () => {
     const [activeFilter, setActiveFilter] = useState('all');
 
-   
+    useEffect(() => {
+        AOS.init();
+      }, [])
 
     useEffect(() => {
         const handleClick = (event) => {
@@ -56,7 +60,7 @@ const GallerySection = () => {
             </div>
             <div className="gallery-filter">
                 {videoData.filter(video => activeFilter === 'all' || video.category === activeFilter).map((video) => (
-                    <div key={video.id} className={`gs-item mix ${video.category}`}>
+                    <div key={video.id} className={`gs-item mix ${video.category}`} data-aos="flip-left">
                         <iframe
                             width="100%"
                             height="auto"

@@ -1,10 +1,17 @@
 import "./counterSection.scss";
 import { useEffect, useState} from "react";
 import { Container, Row, Col } from 'react-bootstrap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const CounterSection = () => {
     const [projectCount, setProjectCount] = useState(0);
     const [eventCount, setEventCount] = useState(0);
+
+    useEffect(() => {
+      AOS.init();
+    }, [])
+
     useEffect(() => {
         const animateCount = (target, setState, duration) => {
           let start = 0;
@@ -31,7 +38,7 @@ const CounterSection = () => {
             <Container>
               <Row>
                 <Col lg={6}>
-                  <div className="counter-text">
+                  <div className="counter-text" data-aos = "fade-up">
                     <div className="section-title">
                       <span>Number Speaks</span>
                       <h2>We have a lot of <br />experience</h2>
@@ -40,7 +47,7 @@ const CounterSection = () => {
                   </div>
                 </Col>
                 <Col lg={6}>
-                  <div className="counter-item">
+                  <div className="counter-item" data-aos = "fade-up">
                     <div className="ci-number count">
                       {projectCount}
                     </div>
@@ -50,7 +57,7 @@ const CounterSection = () => {
                         implementation through cooperation.</p>
                     </div>
                   </div>
-                  <div className="counter-item">
+                  <div className="counter-item" data-aos = "fade-up">
                     <div className="ci-number count">
                       {eventCount}
                     </div>

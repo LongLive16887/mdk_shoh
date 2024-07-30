@@ -1,8 +1,17 @@
 import "./portfolioSection.scss"
 import { Container, Row, Col } from 'react-bootstrap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 const PortfolioSection = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
+
     return(
         <section className="portfolio-section spad">
             <Container>
@@ -18,6 +27,7 @@ const PortfolioSection = () => {
                 <Col lg={6}>
                   <div 
                     className="portfolio-item large-item" 
+                    data-aos = "flip-right"
                     style={{ backgroundImage: 'url(https://nztcdn.com/files/bcea6246-9461-4d6c-b958-42a54a155f22.webp)' }}
                   >
                     <div className="pi-hover">
@@ -32,6 +42,7 @@ const PortfolioSection = () => {
                 </Col>
                 <Col lg={6}>
                   <div 
+                  data-aos = "flip-right"
                     className="portfolio-item" 
                     style={{ backgroundImage: 'url(https://i.imgur.com/RtpTfp0.gif)' }}
                   >
@@ -46,7 +57,8 @@ const PortfolioSection = () => {
                   </div>
                   <Row>
                     <Col md={6}>
-                      <div 
+                      <div
+                      data-aos = "flip-right"
                         className="portfolio-item" 
                         style={{ backgroundImage: 'url(https://nztcdn.com/files/866f71eb-0d38-4935-9e2d-9d7e5f36fe20.webp)' }}
                       >
@@ -62,6 +74,7 @@ const PortfolioSection = () => {
                     </Col>
                     <Col md={6}>
                       <div 
+                      data-aos = "flip-right"
                         className="portfolio-item" 
                         style={{ backgroundImage: 'url(https://mdk.pw/img/portfolio/portfolio-4.jpg)' }}
                       >

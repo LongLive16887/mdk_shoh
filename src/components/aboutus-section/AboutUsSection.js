@@ -1,19 +1,29 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import "./aboutUsSection.scss"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
+
 const AboutUsSection = () => {
+
+    useEffect(() => {
+      AOS.init();
+    }, [])
+
     return (
         <section className="about-us-section spad">
             <Container>
               <Row>
                 <Col lg={6}>
-                  <div className="as-pic">
+                  <div className="as-pic" data-aos = "fade-right">
                     <video src="https://mdk.pw/img/dva1.mp4" autoPlay muted loop style={{ borderRadius: '20px' }} id="bgVideo">
                       <source src="https://mdk.pw/img/dva1.mp4" type="video/mp4" />
                     </video>
                   </div>
                 </Col>
                 <Col lg={6}>
-                  <div className="as-text">
+                  <div className="as-text" data-aos = "fade-left">
                     <div className="section-title">
                       <span>FAQ</span>
                       <h2>Общая информация</h2>

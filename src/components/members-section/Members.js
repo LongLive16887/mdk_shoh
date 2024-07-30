@@ -1,11 +1,20 @@
 import "./members.scss";
 import { Container, Row, Col } from 'react-bootstrap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 const Members = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
     return (
         <section className="member-section spad">
-            <Container>
+            <Container 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
               <Row>
                 <Col lg={12}>
                   <div className="section-title">

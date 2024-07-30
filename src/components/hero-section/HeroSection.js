@@ -1,9 +1,16 @@
 import "./heroSection.scss"
 import { Container, Row, Col } from 'react-bootstrap';
 import { useEffect,useRef} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const HeroSection = () => {
     const videoRef = useRef(null);
+
+    useEffect(() => {
+        AOS.init();
+      }, [])
+  
 
     useEffect(() => {
         const video = videoRef.current;
@@ -35,7 +42,7 @@ const HeroSection = () => {
                 Ваш браузер не поддерживает видео.
             </video>
             </div>
-            <div className="textosnova">
+            <div className="textosnova" data-aos = "flip-right">
             <div className="hs-text">
                 <Container>
                 <Row>
