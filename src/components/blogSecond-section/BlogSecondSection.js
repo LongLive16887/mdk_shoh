@@ -1,4 +1,3 @@
-import "../blog-section/blogSection.scss"
 import { Container, Row, Col } from 'react-bootstrap';
 
 const BlogSecondSection = () => {
@@ -86,7 +85,7 @@ const blogPosts = [
       }
     },
     {
-        id: 1,
+        id: 3,
         imgSrc: 'https://mdk.pw/img/blog/blog-3.jpg',
         date: 'August 9, 2019',
         comments: 0,
@@ -99,7 +98,7 @@ const blogPosts = [
         }
       },
       {
-        id: 2,
+        id: 4,
         imgSrc: 'https://mdk.pw/img/blog/blog-4.jpg',
         date: 'August 9, 2019',
         comments: 0,
@@ -111,7 +110,7 @@ const blogPosts = [
           avatar: 'https://mdk.pw/img/blog/author-2.jpg'
         }
       },{
-        id: 1,
+        id: 5,
         imgSrc: 'https://mdk.pw/img/blog/blog-5.jpg',
         date: 'August 9, 2019',
         comments: 0,
@@ -124,7 +123,7 @@ const blogPosts = [
         }
       },
       {
-        id: 2,
+        id: 6,
         imgSrc: 'https://mdk.pw/img/blog/blog-5.jpg',
         date: 'August 9, 2019',
         comments: 0,

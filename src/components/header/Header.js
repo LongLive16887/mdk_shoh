@@ -1,4 +1,3 @@
-import "./header.scss";
 import { Container, Row, Col } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
 
@@ -64,7 +63,10 @@ const Header = () => {
             </div>
           </Col>
         </Row>
-        <div id="mobile-menu-wrap"></div>
+        <div id="mobile-menu-wrap">
+
+
+        </div>
       </Container>
     </div>
   );

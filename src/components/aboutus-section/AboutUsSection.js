@@ -1,6 +1,5 @@
-import "./aboutUsSection.scss"
 import { Container, Row, Col } from 'react-bootstrap';
-
+import "./aboutUsSection.scss"
 const AboutUsSection = () => {
     return (
         <section className="about-us-section spad">

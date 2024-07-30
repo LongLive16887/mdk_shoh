@@ -1,35 +1,5 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './blogSection.scss';  // Убедитесь, что файл SCSS подключен правильно
-
-const blogPosts = [
-  {
-    id: 1,
-    imgSrc: 'https://mdk.pw/img/blog/blog-1.jpg',
-    date: 'August 9, 2019',
-    comments: 0,
-    title: 'Every Single Way You Can Wear Pastel Makeup This Spring',
-    excerpt: 'Never ever think of giving up. Winners never quit and',
-    author: {
-      name: 'Jeff Rodriguez',
-      role: 'Designer',
-      avatar: 'https://mdk.pw/img/blog/author-1.jpg'
-    }
-  },
-  {
-    id: 2,
-    imgSrc: 'https://mdk.pw/img/blog/blog-2.jpg',
-    date: 'August 9, 2019',
-    comments: 0,
-    title: 'Everything Coming to Netflix Canada in May 2019',
-    excerpt: 'Never ever think of giving up. Winners never quit and',
-    author: {
-      name: 'Aaron Russell',
-      role: 'Content',
-      avatar: 'https://mdk.pw/img/blog/author-1.jpg'
-    }
-  }
-];
 
 const BlogSection = () => {
   return (
@@ -43,18 +13,17 @@ const BlogSection = () => {
             </div>
           </Col>
         </Row>
-        <Row className="d-flex">
-          {blogPosts.map(post => (
-            <Col md={6} key={post.id}>
+        <Row>
+        <Col md={6}>
               <div className="blog-item">
                 <Row>
-                  <Col lg={6} md = {12}>
+                  <Col lg = {6}>
                     <div 
                       className="bi-pic set-bg" 
-                      style={{ backgroundImage: `url(${post.imgSrc})` }} 
+                      style={{ backgroundImage: `url(https://mdk.pw/img/blog/blog-1.jpg)` }} 
                     />
                   </Col>
-                  <Col lg={6} md = {12}>
+                  <Col lg = {6}>
                     <div className="bi-text">
                       <ul>
                         <li>
@@ -64,7 +33,7 @@ const BlogSection = () => {
                             height="16" 
                             width="16" 
                           /> 
-                          {post.date}
+                          {"August 9, 2019"}
                         </li>
                         <li>
                           <img 
@@ -73,18 +42,18 @@ const BlogSection = () => {
                             height="16" 
                             width="16" 
                           /> 
-                          {post.comments}
+                          0
                         </li>
                       </ul>
-                      <h4><a href="/">{post.title}</a></h4>
-                      <p>{post.excerpt}</p>
+                      <h4><a href="/">Every Single Way You Can Wear Pastel Makeup This Spring</a></h4>
+                      <p>Never ever think of giving up. Winners never quit and</p>
                       <div className="bt-author">
                         <div className="ba-pic">
-                          <img src={post.author.avatar} alt="Author" />
+                          <img src={"https://mdk.pw/img/blog/author-1.jpg"} alt="Author" />
                         </div>
                         <div className="ba-text">
-                          <h5>{post.author.name}</h5>
-                          <span>{post.author.role}</span>
+                          <h5>Jeff Rodriguez</h5>
+                          <span>Designer</span>
                         </div>
                       </div>
                     </div>
@@ -92,7 +61,53 @@ const BlogSection = () => {
                 </Row>
               </div>
             </Col>
-          ))}
+            <Col md={6}>
+              <div className="blog-item">
+                <Row>
+                  <Col lg={6} >
+                    <div 
+                      className="bi-pic set-bg" 
+                      style={{ backgroundImage: `url(https://mdk.pw/img/blog/blog-2.jpg)` }} 
+                    />
+                  </Col>
+                  <Col lg={6} >
+                    <div className="bi-text">
+                      <ul>
+                        <li>
+                          <img 
+                            src="https://unpkg.com/@icon/themify-icons@1.0.1-alpha.3/icons/calendar.svg" 
+                            alt="calendar" 
+                            height="16" 
+                            width="16" 
+                          /> 
+                          {"August 9, 2019"}
+                        </li>
+                        <li>
+                          <img 
+                            src="https://unpkg.com/@icon/themify-icons@1.0.1-alpha.3/icons/comment.svg" 
+                            alt="comment" 
+                            height="16" 
+                            width="16" 
+                          /> 
+                          0
+                        </li>
+                      </ul>
+                      <h4><a href="/">Every Single Way You Can Wear Pastel Makeup This Spring</a></h4>
+                      <p>Never ever think of giving up. Winners never quit and</p>
+                      <div className="bt-author">
+                        <div className="ba-pic">
+                          <img src={"https://mdk.pw/img/blog/author-2.jpg"} alt="Author" />
+                        </div>
+                        <div className="ba-text">
+                          <h5>Jeff Rodriguez</h5>
+                          <span>Designer</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
         </Row>
       </Container>
     </section>

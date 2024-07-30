@@ -5,6 +5,7 @@ import { lazy,Suspense  } from "react";
 import Spinner from "./components/spinner/Spinner"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.scss"
+import "./_media.scss"
 
 
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -12,8 +13,6 @@ const AboutUsPage = lazy(() => import('./pages/AboutUsPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
-
-
 
 
 function App() {

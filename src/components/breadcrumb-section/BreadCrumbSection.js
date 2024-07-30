@@ -11,8 +11,6 @@ const BreadcrumbComponent = () => {
     '/about-us': 'About Us',
     '/blog': 'Blog',
   };
-  console.log(88021312)
-  
 
   return (
     <section className="breadcrumb-section">
