@@ -5,6 +5,9 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 
+import photo from "../../assets/tan1.webp"
+
+
 const Members = () => {
   useEffect(() => {
     AOS.init();
@@ -52,7 +55,7 @@ const Members = () => {
 
 const members = [
     {
-      img: 'https://mdk.pw/img/member/member-1.jpg',
+      img: photo,
       name: 'Jacob Gomez',
       title: 'Designer',
       description: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
@@ -64,7 +67,7 @@ const members = [
       ]
     },
     {
-      img: 'https://mdk.pw/img/member/member-2.jpg',
+      img: photo,
       name: 'Emma Smith',
       title: 'UI/UX Designer',
       description: 'Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
@@ -76,7 +79,7 @@ const members = [
       ]
     },
     {
-      img: 'https://mdk.pw/img/member/member-3.jpg',
+      img: photo,
       name: 'John Doe',
       title: 'Front-end Developer',
       description: 'Cras aliquam turpis tellus, quis laoreet lacus congue sed. Nullam at est quis urna vestibulum interdum.',

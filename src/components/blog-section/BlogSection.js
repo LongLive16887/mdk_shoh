@@ -3,12 +3,15 @@ import { Container, Row, Col } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import photo from "../../assets/tan1.webp"
 
 const BlogSection = () => {
   useEffect(() => {
     AOS.init();
   }, [])
   
+  
+
   
   return (
     <section className="blog-section latest-blog spad">
@@ -28,7 +31,7 @@ const BlogSection = () => {
                   <Col lg = {6}>
                     <div 
                       className="bi-pic set-bg" 
-                      style={{ backgroundImage: `url(https://mdk.pw/img/blog/blog-1.jpg)` }} 
+                      style={{ backgroundImage: `url(${photo})` }} 
                     />
                   </Col>
                   <Col lg = {6}>
@@ -57,7 +60,7 @@ const BlogSection = () => {
                       <p>Never ever think of giving up. Winners never quit and</p>
                       <div className="bt-author">
                         <div className="ba-pic">
-                          <img src={"https://mdk.pw/img/blog/author-1.jpg"} alt="Author" />
+                          <img src={photo} alt="Author" />
                         </div>
                         <div className="ba-text">
                           <h5>Jeff Rodriguez</h5>
@@ -75,7 +78,7 @@ const BlogSection = () => {
                   <Col lg={6} >
                     <div 
                       className="bi-pic set-bg" 
-                      style={{ backgroundImage: `url(https://mdk.pw/img/blog/blog-2.jpg)` }} 
+                      style={{ backgroundImage: `url(${photo})` }} 
                     />
                   </Col>
                   <Col lg={6} >
@@ -104,7 +107,7 @@ const BlogSection = () => {
                       <p>Never ever think of giving up. Winners never quit and</p>
                       <div className="bt-author">
                         <div className="ba-pic">
-                          <img src={"https://mdk.pw/img/blog/author-2.jpg"} alt="Author" />
+                          <img src={photo} alt="Author" />
                         </div>
                         <div className="ba-text">
                           <h5>Jeff Rodriguez</h5>

@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useEffect,useRef} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import photo from "../../assets/anime.mp4"
 
 const HeroSection = () => {
     const videoRef = useRef(null);
@@ -37,8 +38,8 @@ const HeroSection = () => {
     return(
         <section className="hero-section set-bg">
             <div className="video-background">
-            <video ref={videoRef} src="https://mdk.pw/img/finish.mp4" autoPlay muted loop id="bgVideo">
-                <source src="https://mdk.pw/img/finish.mp4" type="video/mp4" />
+            <video ref={videoRef} src={photo} autoPlay muted loop id="bgVideo">
+                <source src={photo} type="video/mp4" />
                 Ваш браузер не поддерживает видео.
             </video>
             </div>

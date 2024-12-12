@@ -5,6 +5,8 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
+import photo from "../../assets/tan1.webp"
+
 const TestimonialSection = () => {
 
     const options = {
@@ -36,7 +38,7 @@ const TestimonialSection = () => {
                     <Col lg = {6} key ={index}>
                       <div className="testimonial-item">
                         <div className="ti-pic">
-                          <img src={testimonial.img} alt={testimonial.name} />
+                          <img src={photo} alt={testimonial.name} />
                         </div>
                         <div className="ti-text">
                           <div className="ti-title">
